@@ -22,7 +22,7 @@ function varargout = visualizadorPrototipo(varargin)
 
 % Edit the above text to modify the response to help visualizadorPrototipo
 
-% Last Modified by GUIDE v2.5 02-Oct-2016 10:52:22
+% Last Modified by GUIDE v2.5 20-Oct-2016 18:50:04
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -56,79 +56,25 @@ function visualizadorPrototipo_OpeningFcn(hObject, eventdata, handles, varargin)
 handles.output = hObject;
 
 % Update handles structure
-
-
-% Colocando uma imagem qualquer
-axes(handles.view);
-imshow('img/img001.jpg');
 guidata(hObject, handles);
-
-% UIWAIT makes visualizadorPrototipo wait for user response (see UIRESUME)
-% uiwait(handles.figure1);
-
-
-% --- Outputs from this function are returned to the command line.
 function varargout = visualizadorPrototipo_OutputFcn(hObject, eventdata, handles) 
-% varargout  cell array for returning output args (see VARARGOUT);
-% hObject    handle to figure
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Get default command line output from handles structure
 varargout{1} = handles.output;
-
-
-% --- Executes on button press in btnDireita.
-function btnDireita_Callback(hObject, eventdata, handles)
-% hObject    handle to btnDireita (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-% --- Executes on button press in btnEsquerda.
+function btnRight_Callback(hObject, eventdata, handles)
 function btnEsquerda_Callback(hObject, eventdata, handles)
-% hObject    handle to btnEsquerda (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-% --- If Enable == 'on', executes on mouse press in 5 pixel border.
-% --- Otherwise, executes on mouse press in 5 pixel border or over btnEsquerda.
 function btnEsquerda_ButtonDownFcn(hObject, eventdata, handles)
-% hObject    handle to btnEsquerda (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-% --- Executes on key press with focus on btnDireita and none of its controls.
-function btnDireita_KeyPressFcn(hObject, eventdata, handles)
-% hObject    handle to btnDireita (see GCBO)
-% eventdata  structure with the following fields (see MATLAB.UI.CONTROL.UICONTROL)
-%	Key: name of the key that was pressed, in lower case
-%	Character: character interpretation of the key(s) that was pressed
-%	Modifier: name(s) of the modifier key(s) (i.e., control, shift) pressed
-% handles    structure with handles and user data (see GUIDATA)
-
-
-% --- Executes on key press with focus on btnEsquerda and none of its controls.
+function btnRight_KeyPressFcn(hObject, eventdata, handles)
 function btnEsquerda_KeyPressFcn(hObject, eventdata, handles)
-% hObject    handle to btnEsquerda (see GCBO)
-% eventdata  structure with the following fields (see MATLAB.UI.CONTROL.UICONTROL)
-%	Key: name of the key that was pressed, in lower case
-%	Character: character interpretation of the key(s) that was pressed
-%	Modifier: name(s) of the modifier key(s) (i.e., control, shift) pressed
-% handles    structure with handles and user data (see GUIDATA)
-
-
-% --- Executes on button press in btnZoomIn.
 function btnZoomIn_Callback(hObject, eventdata, handles)
-% hObject    handle to btnZoomIn (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-% --- Executes on button press in btnZoomOut.
 function btnZoomOut_Callback(hObject, eventdata, handles)
-% hObject    handle to btnZoomOut (see GCBO)
+function btnUp_Callback(hObject, eventdata, handles)
+function btnDown_Callback(hObject, eventdata, handles)
+
+function btnStar_Callback(hObject, eventdata, handles)
+ler_imagem();
+
+
+% --- Executes on button press in btnUpload.
+function btnUpload_Callback(hObject, eventdata, handles)
+% hObject    handle to btnUpload (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
